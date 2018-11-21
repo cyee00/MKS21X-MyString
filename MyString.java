@@ -25,12 +25,24 @@ public class MyString implements CharSequence{
   }
 
   public CharSequence subSequence(int start, int end){
-    CharSequence ans = "";
+    String ans = "";
+    if (start<0||end<0||end>cs.length()||start>end){
+      throw new IndexOutOfBoundsException();
+    }else{
+      for (int i=0;i<cs.length();i++){
+        if (i>=start&&i<end){
+          ans+=cs.charAt(i);
+        }
+      }
+    }
     return ans;
   }
 
   public String toString(){
     String ans = "";
+    for (int i=0;i<cs.length();i++){
+      ans+=cs.charAt(i);
+    }
     return ans;
   }
 
