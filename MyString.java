@@ -19,7 +19,7 @@ public class MyString implements CharSequence{
   }
 
   public int length(){
-    
+    return chars.length();
   }
 
 }
