@@ -21,7 +21,11 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   }
 
   public int length(){
-    return cs.length();
+    int ans = 0;
+    for (int i=0;i<chars.length;i++){
+      ans++;
+    }
+    return ans;
   }
 
   public CharSequence subSequence(int start, int end){
@@ -49,14 +53,18 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   public int shorter(CharSequence a, CharSequence b){ //helpr function for compareTo; returns the length of the shorter of the two charsequences so I don't get an IndexOutOfBoundsException
     if (a.length()>b.length()){
-      return a.length();
+      return b.length();
     }
-    return b.length();
+    return a.length();
   }
 
-  public int compareTo(CharSequence c){
-    for (int i=0;i<shorter(cs,c);i++){
-      if (cs.charAt(i)+0>c.charAt(i)){
+  public int compareTo(CharSequence c) throws NullPointerException{
+    if (cs==""&&c!=""){
+      return -1;
+    } else if (c!=""&&cs==""){
+      return 1;
+    } else for (int i=0;i<shorter(cs,c);i++){
+      if (cs.charAt(i)+0>c.charAt(i)+0){
         return 1;
       } else if (c.charAt(i)+0>cs.charAt(i)+0){
         return -1;
