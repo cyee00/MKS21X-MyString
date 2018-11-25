@@ -58,7 +58,10 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     return a.length();
   }
 
-  public int compareTo(CharSequence c) throws NullPointerException{
+  public int compareTo(CharSequence c){
+    if (cs==null||c==null){
+      throw new NullPointerException();
+    }
     if (cs==""&&c!=""){
       return -1;
     } else if (c!=""&&cs==""){

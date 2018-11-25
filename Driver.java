@@ -105,8 +105,8 @@ public class Driver {
 	}
 
 	private static String sgn(int i) {
-		if (i > 0) return "something positive";
-		if (i < 0) return "something negative";
+		if (i > 0) return i+"";
+		if (i < 0) return i+"";
 		return "0";
 	}
 }
