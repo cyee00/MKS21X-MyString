@@ -5,7 +5,7 @@ public class Driver {
 
 		// A list of test cases. Add anything to this list, and it will run through a complete test case on that MyString.
 		String[] cases = {
-			"",
+			//"",
 			"mario",
 			"luigi",
 			"qwertyuiopasdfghjklzxcvbnm",
