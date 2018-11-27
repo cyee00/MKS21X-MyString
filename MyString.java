@@ -77,4 +77,4 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     return 0;//the two charsequences are identical.
   }
 
-}
+}//end file
